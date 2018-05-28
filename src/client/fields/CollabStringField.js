@@ -126,8 +126,8 @@ if (process.env.NODE_ENV !== 'production') {
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,
     formData: PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number,
+      PropTypes.string,
+      PropTypes.number,
     ]),
     registry: PropTypes.shape({
       widgets: PropTypes.objectOf(
