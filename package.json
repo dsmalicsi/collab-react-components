@@ -1,12 +1,12 @@
 {
-  "name": "collab-react-components",
+  "name": "react-collab-components",
   "version": "0.0.9",
   "description": "React components for collaborative editing: text, rich text, and complex forms",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dsmalicsi/collab-react-components"
   },
-  "author": "Daryll Malicis <dsmalicsi@gmail.com> (http://dsmalicsi.com)",
+  "author": "Daryll Malicsi <dsmalicsi@gmail.com> (http://dsmalicsi.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dsmalicsi/collab-react-components/issues"
