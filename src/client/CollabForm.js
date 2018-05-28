@@ -177,14 +177,15 @@ export default class CollabForm extends Component {
 
   render() {
     return (
-      this.state.form &&
-      <Form
-        {...this.props}
-        schema={this.state.form.data.schema}
-        formData={this.state.form.data.data}
-        onChange={this.onChange.bind(this)}
-        formContext={this.state.form}
-      />
+      this.state.form && (
+        <Form
+          {...this.props}
+          schema={this.state.form.data.schema}
+          formData={this.state.form.data.data}
+          onChange={this.onChange.bind(this)}
+          formContext={this.state.form}
+        />
+      )
     );
   }
 }

@@ -1,17 +1,17 @@
 {
   "name": "collab-react-components",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "React components for collaborative editing: text, rich text, and complex forms",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chili-epfl/collab-react-components"
+    "url": "git+https://github.com/dsmalicsi/collab-react-components"
   },
-  "author": "Dario Anongba Varela <dario.anongba@gmail.com> (http://dario-anongba.me)",
+  "author": "Daryll Malicis <dsmalicsi@gmail.com> (http://dsmalicsi.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chili-epfl/collab-react-components/issues"
+    "url": "https://github.com/dsmalicsi/collab-react-components/issues"
   },
-  "homepage": "https://github.com/chili-epfl/collab-react-components#readme",
+  "homepage": "https://github.com/dsmalicsi/collab-react-components#readme",
   "keywords": [
     "react",
     "sharedb",
