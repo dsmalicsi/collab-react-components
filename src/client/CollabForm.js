@@ -49,8 +49,14 @@ export default class CollabForm extends Component {
     this.subscribeToForm(this.props);
   }
 
+  componentWillUnmount() {
+    // We should unsubscribe from the current form and subscribe to the new one
+    this.unsubscribe();
+  }
+
   componentWillReceiveProps(nextProps) {
     // We should unsubscribe from the current form and subscribe to the new one
+    console.log("id", this.props.id, nextProps.id, "collectionName", this.props.collectionName, nextProps.collectionName)
     if (
       nextProps.id !== this.props.id ||
       nextProps.collectionName !== this.props.collectionName
