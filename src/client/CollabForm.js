@@ -56,7 +56,6 @@ export default class CollabForm extends Component {
 
   componentWillReceiveProps(nextProps) {
     // We should unsubscribe from the current form and subscribe to the new one
-    console.log("id", this.props.id, nextProps.id, "collectionName", this.props.collectionName, nextProps.collectionName)
     if (
       nextProps.id !== this.props.id ||
       nextProps.collectionName !== this.props.collectionName
