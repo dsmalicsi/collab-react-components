@@ -16,7 +16,7 @@ function CollabTextareaWidget(props) {
     autofocus,
     onChange,
     onBlur,
-    widgetRef
+    widgetRef,
   } = props;
   const _onChange = ({ target: { value } }) => {
     return onChange(value === '' ? options.emptyValue : value);
@@ -32,6 +32,7 @@ function CollabTextareaWidget(props) {
       readOnly={readonly}
       autoFocus={autofocus}
       rows={options.rows}
+      name={id}
       onBlur={onBlur && (event => onBlur(id, event.target.value))}
       onChange={_onChange}
       ref={widgetRef}
@@ -48,6 +49,7 @@ if (process.env.NODE_ENV !== 'production') {
   CollabTextareaWidget.propTypes = {
     schema: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
+    name: PropTypes.string,
     placeholder: PropTypes.string,
     options: PropTypes.shape({
       rows: PropTypes.number,

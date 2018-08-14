@@ -33,6 +33,7 @@ function CollabBaseInput(props) {
       disabled={disabled}
       autoFocus={autofocus}
       value={value === null ? '' : value}
+      name={inputProps.id}
       {...inputProps}
       onChange={_onChange}
       onBlur={onBlur && (event => onBlur(inputProps.id, event.target.value))}
@@ -52,6 +53,7 @@ CollabBaseInput.defaultProps = {
 if (process.env.NODE_ENV !== 'production') {
   CollabBaseInput.propTypes = {
     id: PropTypes.string.isRequired,
+    name: PropTypes.string,
     placeholder: PropTypes.string,
     value: PropTypes.any,
     required: PropTypes.bool,
