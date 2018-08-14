@@ -2,6 +2,7 @@
  * Created by dario on 11.05.17.
  */
 import http from 'http';
+import https from 'https';
 import ShareDB from 'sharedb';
 import ShareDBMongo from 'sharedb-mongo';
 import RichText from 'rich-text';
@@ -19,14 +20,20 @@ const defaultOptions = {
   },
 };
 
-CollabServer.start = (app = {}, options = {}) => {
+CollabServer.start = (app = {}, options = {}, httpsMode, httpOptions = {}) => {
   // We merge the options defined by the user
   CollabServer.options = {
     ...defaultOptions,
     ...options,
   };
 
-  const server = http.createServer(app);
+  let server = null;
+  if (httpsMode) {
+    server = https.createServer(httpOptions, app);
+  } else {
+    server = http.createServer(app);
+  }
+
   let db = null;
   if (CollabServer.options.db.type === 'mongo') {
     db = CollabServer.options.db.url
