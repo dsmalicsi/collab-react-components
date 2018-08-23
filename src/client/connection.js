@@ -12,11 +12,14 @@ const host = port
   : window.location.host + ':8080';
 let socketProtocol = 'ws://';
 
+let socketUrl = socketProtocol + host;
+
 if (protocol === 'https:') {
   socketProtocol = 'wss://';
+  socketUrl = socketProtocol + window.location.host + '/websocket';
 }
 
-const webSocket = new WebSocket(socketProtocol + host);
+const webSocket = new WebSocket(socketUrl);
 const connection = new sharedb.Connection(webSocket);
 
 export default connection;

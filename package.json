@@ -1,6 +1,6 @@
 {
   "name": "react-collab-components-poi",
-  "version": "0.1.14",
+  "version": "0.1.16",
   "description": "React components for collaborative editing: text, rich text, and complex forms",
   "repository": {
     "type": "git",
